@@ -8,7 +8,7 @@
         <a-scene embedded arjs>
 
             <a-assets>
-                <img id="my-image" src="./animoji.png" rotation="0 90 0" position="0 2.15 10" scale="1.5 1.5 1.5">
+                <img id="my-image" src="./animoji.png" >
             </a-assets>
 
             <!-- Camera Marker Setup & Camera setup-->
@@ -19,8 +19,10 @@
             <!--
                 <a-box position='0 0.5 0' material='opacity: 0.5;'>
             </a-box>
+
+                <a-image src="#my-image" rotation="0 90 0" position="0 2.15 10" scale="1.5 1.5 1.5"></a-image>
             -->
-                <a-image src="#my-image" ></a-image>
+                <a-box src="#my-image"></a-box>
 
             <!-- Camera implementation-->
             <a-entity camera></a-entity>
