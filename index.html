@@ -3,22 +3,21 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs='sourceType: webcam;'>
 
-    <!-- handle marker with hiro preset -->
-    <a-marker preset='hiro'>
-      <a-box position='0 0.5 0' material='color: green;'></a-box>
-    </a-marker>
-
-    <!-- handle barcode marker -->
-    <a-marker type='barcode' value='5'>
-      <a-box position='0 0.5 0' material='color: blue;'></a-box>
-    </a-marker>
 
     <a-assets>
         <a-image src="./animoji.png"></a-image>
     <\a-assets>
 
+
+<!-- here is a kanji preset -->
+<a-marker preset='kanji'></a-marker>
+
+<!-- it is the same as the marker below -->
+<a-marker type='pattern' url='http://examples.org/kanji.patt'></a-marker>
+
     <!-- add a simple camera -->
-    <a-marker-camera preset='hiro'></a-marker-camera>
+    <a-marker-camera preset='kanji'></a-marker-camera>
+
 
   </a-scene>
 </body>
