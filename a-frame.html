@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+
+            <a-assets>
+                <img id="my-image" src="./animoji.png" >
+            </a-assets>
+
+                <!-- Camera Marker Setup & Camera setup-->
+                <a-marker type='pattern' url='https://raw.githubusercontent.com/tyronyiu/webar/master/pattern-logo.patt'>
+
+                    <!-- Content -->
+                    <a-box src="#my-image" position="0 1 -1" rotation="0 90 0"
+                                                             scale="1.5 1.5 1.5"></a-box>
+                </a-marker>
+
+
+                <!-- Camera Marker Setup & Camera setup-->
+                <a-marker type='pattern'
+                          url='https://raw.githubusercontent.com/tyronyiu/webar/master/pattern-jameson.patt'>
+
+                    <!-- Content -->
+                    <a-box position='0 0.5 -1' material='color: green;'></a-box>
+                </a-marker>
+
+
+                <!-- Camera Marker Setup & Camera setup-->
+                <a-marker type='barcode' value='5'>
+                    <!-- Content -->
+                    <a-box src="#my-image" position="0 1 -1" rotation="0 90 0"
+                                                             scale="1.5 1.5 1.5"></a-box>
+                </a-marker>
+
+
+                <!--
+                    <a-box position='0 0.5 0' material='opacity: 0.5;'>
+                    </a-box>
+
+                    <a-image src="#my-image" rotation="0 90 0" position="0 2.15 10" scale="1.5 1.5 1.5"></a-image>
+                -->
+
+
+                <!-- Camera implementation-->
+                <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
